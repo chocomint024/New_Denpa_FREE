@@ -1,81 +1,61 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('images/N.jpg') no-repeat center top; /* 背景を上部に配置 */
-    background-size: 100% auto; /* 横幅いっぱいにして、縦は自動調整 */
+    background: url('images/N.jpg') no-repeat center center fixed; /* 背景画像を設定 */
+    background-size: cover; /* 画面いっぱいに表示 */
     color: white;
     text-align: center;
 }
 
 .container {
-    background-color: white;
-    padding: 40px;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明の白背景で可読性を向上 */
+    color: black;
     border-radius: 10px;
-    display: inline-block;
-    margin-top: 100px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
-    background: rgba(200, 200, 200, 0.5);
-    padding: 12px 20px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    background: rgba(150, 150, 150, 0.7);
-}
-
-.twitter-account {
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px 15px;
+.btn {
+    display: block;
+    width: 300px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.twitter-account p {
+    text-align: center;
+    line-height: 80px;
     font-size: 18px;
-    margin: 0;
-}
-
-.twitter-account span {
     font-weight: bold;
-}
-
-.follow-button {
-    display: inline-block;
-    background: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
-    margin-top: 5px;
+    color: white;
 }
 
-.follow-button:hover {
-    background: #333;
+.discord {
+    background-image: url('images/discord.png'); /* Discordボタンの画像 */
 }
 
-.twitter-timeline {
-    margin-top: 30px;
+.qr {
+    background-image: url('images/qr.png'); /* QRコード生成ボタンの画像 */
+}
+
+.physique {
+    background-image: url('images/physique.png'); /* 体格表ボタンの画像 */
+}
+
+.battle {
+    background-image: url('images/battle.png'); /* バトルタワー攻略ボタンの画像 */
 }
