@@ -8,10 +8,12 @@ body {
 
 
 .header-image {
-    width: 100%;
-    max-height: 1320px;
-    object-fit: cover;
+    max-width: 100%;  /* 親要素の幅を超えないようにする */
+    height: auto;     /* 縦横比を維持 */
+    display: block;   /* 余計な隙間をなくす */
+    margin: 0 auto;   /* 中央揃え */
 }
+
 
 .container {
     width: 80%;
