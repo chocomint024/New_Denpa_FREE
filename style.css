@@ -1,8 +1,9 @@
 body {
-    background-image: url("N.jpg"); /* 画像のパス */
-    background-size: cover; /* 画面いっぱいに表示 */
-    background-position: center; /* 画像の位置を中央に */
-    background-repeat: no-repeat; /* 繰り返しを防ぐ */
+    background-image: url('N.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 
