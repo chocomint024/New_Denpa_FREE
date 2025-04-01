@@ -67,3 +67,18 @@ nav ul li {
 .battle {
     background-image: url('images/battle.png'); /* バトルタワー攻略ボタンの画像 */
 }
+
+.twitter-account {
+    text-align: right; /* 右寄せ */
+    margin-bottom: 10px; /* 下の余白 */
+}
+
+.twitter-account p {
+    display: inline; /* 横並びにする */
+    margin-right: 10px; /* 文字間の余白 */
+}
+
+.twitter-account a {
+    margin-left: 10px; /* フォローボタンの間隔 */
+}
+
