@@ -83,3 +83,47 @@ nav ul li {
 .twitter-account a {
     margin-left: 10px; /* フォローボタンの間隔 */
 }
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 各要素の間隔 */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.credits {
+    font-size: 14px; /* 文字サイズを少し小さめに */
+}
+
+.buttons, .download-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.follow-button {
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.download-buttons img {
+    height: 40px; /* サイズを調整 */
+    width: auto;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .buttons, .download-buttons {
+        flex-direction: column;
+    }
+}
