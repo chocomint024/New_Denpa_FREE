@@ -69,9 +69,6 @@ nav ul li {
 }
 
 .twitter-account {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
     display: flex;
     align-items: center;
     gap: 15px; /* 間隔を調整 */
@@ -79,6 +76,7 @@ nav ul li {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px; /* 下のタイムラインとの間隔を調整 */
 }
 
 .twitter-account p {
