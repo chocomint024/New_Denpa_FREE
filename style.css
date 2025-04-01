@@ -70,21 +70,45 @@ nav ul li {
 
 .twitter-account {
     display: flex;
-    align-items: center;
-    gap: 15px; /* 間隔を調整 */
-    background-color: rgba(255, 255, 255, 0.8); /* 背景を半透明に */
+    flex-direction: column; /* 縦並びにする */
+    align-items: flex-end; /* 右寄せ */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 15px; /* 下のタイムラインとの間隔を調整 */
+    margin-bottom: 15px;
+    text-align: right;
+    width: fit-content; /* 必要な幅だけ確保 */
+    max-width: 100%; /* スマホ対応 */
 }
 
-.twitter-account p {
-    margin: 0;
+.twitter-account .names {
+    display: flex;
+    gap: 15px; /* 名前の間隔 */
     font-weight: bold;
 }
 
-.twitter-account span {
-    font-weight: normal;
+.twitter-account .follow-buttons {
+    display: flex;
+    gap: 10px; /* フォローボタンの間隔 */
+    margin-top: 5px;
+}
+
+/* スマホ対応（幅が狭いとき） */
+@media screen and (max-width: 600px) {
+    .twitter-account {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .twitter-account .names {
+        flex-direction: column; /* 縦に並べる */
+        text-align: center;
+    }
+    
+    .twitter-account .follow-buttons {
+        flex-direction: column; /* ボタンを縦並び */
+        align-items: center;
+    }
 }
 
