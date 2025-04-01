@@ -31,14 +31,19 @@
         const now = new Date();
         let day = now.getDay(); // 今日の曜日を取得
         let hours = now.getHours(); // 現在の時間を取得
+        let currentDate = now.getDate(); // 日付を取得
 
         // 15時（午後3時）より前なら、前日の日付のイベントを表示
         if (hours < 15) {
             day = (day - 1 + 7) % 7; // 前日に変更（日曜日なら土曜日に戻す）
+            currentDate -= 1; // 日付も前日に
         }
 
+        // 1日おきに「ランダムボスチャレンジ」を追加
+        let extraEvent = (currentDate % 2 === 0) ? ", ランダムボスチャレンジ" : "";
+
         // イベントを表示
-        document.getElementById("daily-event").innerText = `今日のイベント: ${events[day]}`;
+        document.getElementById("daily-event").innerText = `今日のイベント: ${events[day]}${extraEvent}`;
     }
 
     // 初回実行
@@ -47,6 +52,7 @@
     // 1分ごとに更新（ページを開いたままでも自動更新）
     setInterval(updateEvent, 60000);
 </script>
+
 
 
         <nav>
