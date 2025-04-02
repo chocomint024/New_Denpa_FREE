@@ -183,7 +183,7 @@ nav ul li {
 }
 
 .grid-container a:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .grid-container a img {
@@ -206,7 +206,7 @@ nav ul li {
 }
 
 .vertical-list li:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .vertical-list li a img {
