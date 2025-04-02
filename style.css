@@ -150,27 +150,29 @@ nav ul li {
 
 
 
-nav ul {
-    list-style-type: none; /* リストの点を消す */
+.vertical-list {
+    list-style: none; /* デフォルトのリストマーカーを削除 */
     padding: 0;
     display: flex;
-    justify-content: center; /* 中央揃え */
-    flex-wrap: wrap; /* スマホ対応 */
+    flex-direction: column; /* 縦並びにする */
+    align-items: center; /* 中央揃え */
+    gap: 10px; /* 各要素の間隔 */
 }
 
-nav ul li {
-    margin: 10px;
+.vertical-list li {
+    display: block; /* 縦並びを強制 */
 }
 
-nav ul li img {
-    width: 150px; /* 画像サイズを適宜調整 */
+.vertical-list li a img {
+    width: 160px; /* 画像サイズ統一 */
     height: auto;
     transition: transform 0.2s ease-in-out;
 }
 
-nav ul li img:hover {
+.vertical-list li a img:hover {
     transform: scale(1.1); /* ホバー時に拡大 */
 }
+
 
 .grid-container {
     display: grid;
