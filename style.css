@@ -8,23 +8,25 @@ body {
     padding: 0;
 }
 
+
 .header-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    max-width: 100%;  /* 親要素の幅を超えないようにする */
+    height: auto;     /* 縦横比を維持 */
+    display: block;   /* 余計な隙間をなくす */
+    margin: 0 auto;   /* 中央揃え */
 }
+
 
 .container {
     width: 60%;
     margin: auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明の白背景で可読性を向上 */
     color: black;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 0; /* 隙間を完全になくす */
 }
 
 h1 {
@@ -54,43 +56,27 @@ nav ul li {
     font-weight: bold;
     text-decoration: none;
     color: white;
-    transition: transform 0.2s ease-in-out;
+transition: transform 0.2s ease-in-out;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-.header {
-    margin: 0;
-    padding: 0;
-}
-
-#daily-event {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-#event-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
 
 .twitter-account {
-    text-align: right;
-    margin-bottom: 10px;
+    text-align: right; /* 右寄せ */
+    margin-bottom: 10px; /* 下の余白 */
 }
 
 .twitter-account p {
-    display: inline;
-    margin-right: 10px;
-    font-size: 14px;
+    display: inline; /* 横並びにする */
+    margin-right: 10px; /* 文字間の余白 */
+    font-size: 14px; /* 文字を小さく */
 }
 
 .twitter-account a {
-    margin-left: 10px;
+    margin-left: 10px; /* フォローボタンの間隔 */
 }
 
 .footer-container {
@@ -98,13 +84,13 @@ nav ul li {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px; /* 各要素の間隔 */
     text-align: center;
     margin-top: 20px;
 }
 
 .credits {
-    font-size: 14px;
+    font-size: 14px; /* 文字サイズを少し小さめに */
 }
 
 .buttons, .download-buttons {
@@ -119,105 +105,116 @@ nav ul li {
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.follow-button:hover {
-    background-color: #333;
 }
 
 .download-buttons img {
-    height: 40px;
+    height: 40px; /* サイズを調整 */
     width: auto;
 }
 
+/* スマホ対応 */
 @media (max-width: 600px) {
     .footer-container {
         flex-direction: column;
     }
+
     .buttons, .download-buttons {
         flex-direction: column;
     }
 }
-
 .twitter-timeline-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
+    justify-content: center; /* 水平方向の中央寄せ */
+    align-items: center; /* 垂直方向の中央寄せ */
+    width: 100%; /* 親要素いっぱいに広げる */
+    height: auto; /* 必要に応じて調整 */
     padding: 20px 0;
 }
 
 .free-site-link {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
+    text-align: center; /* 中央揃え */
+    font-size: 18px; /* 文字サイズを調整 */
+    font-weight: bold; /* 太字 */
+    margin-top: 20px; /* 余白を追加 */
 }
 
 .free-site-link a {
-    color: #007bff;
-    text-decoration: none;
+    color: #007bff; /* リンクを青色に */
+    text-decoration: none; /* 下線を消す */
     font-weight: bold;
 }
 
 .free-site-link a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+#daily-event {
+    text-align: center; /* 画像を中央配置 */
+    margin: 0;
+    padding: 0;
+}
+
+#event-image {
+    max-width: 100%; /* 画像の幅を自動調整 */
+    height: auto;
+    display: block;
+}
+
+
+
+.vertical-list {
+    list-style: none; /* デフォルトのリストマーカーを削除 */
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    align-items: center; /* 中央揃え */
+    gap: 0; /* 隙間を完全になくす */
+}
+
+.vertical-list li {
+    display: block; /* 縦並びを強制 */
+}
+
+.vertical-list li a img {
+    width: 160px; /* 画像サイズ統一 */
+    height: auto;
+    transition: transform 0.2s ease-in-out; /* スムーズな拡大アニメーション */
+}
+
+.vertical-list li a img:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr); /* 2列レイアウト */
+    gap: 0; /* 隙間を完全になくす */
+    width: 100%; /* 幅いっぱいに広げる */
+    max-width: 900px; /* 幅を広げる（好みに応じて調整） */
+    margin: 0 auto; /* 中央配置 */
 }
 
 .grid-container a {
-    width: 100%;
-    display: block;
-    margin: 0;
+    width: 100%; /* 各ボタンを均等に広げる */
+    display: block; /* ブロック要素として扱う */
+    margin: 0; /* 余白を削除 */
 }
 
 .grid-container a img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.2s ease-in-out;
+    width: 100%; /* 親要素に対してピッタリ */
+    height: auto; /* 縦横比を維持 */
+    display: block; /* 画像の余白を削除 */
+    margin: 0; /* 余白を削除 */
+    transition: transform 0.2s ease-in-out; /* スムーズな拡大アニメーション */
 }
 
 .grid-container a img:hover {
     transform: scale(1.1); /* ホバー時に拡大 */
 }
 
-.vertical-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.vertical-list li {
-    margin: 5px 0;
-    padding: 0;
-    transition: transform 0.2s ease-in-out;
-}
-
-.vertical-list li:hover {
-    transform: scale(1.1);
-}
-
-.vertical-list li a img {
-    display: block;
-    gap: 0;
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
+/* 画面サイズが大きい場合は画像も大きくする */
 @media (min-width: 1024px) {
     .grid-container {
-        max-width: 1200px;
+        max-width: 1200px; /* デスクトップで大きく表示 */
     }
 }
