@@ -200,19 +200,42 @@ nav ul li {
 }
 
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列レイアウト */
+    gap: 0; /* 隙間を完全になくす */
+    width: 100%; /* 幅いっぱいに広げる */
+    max-width: 900px; /* 幅を広げる（好みに応じて調整） */
+    margin: 0 auto; /* 中央配置 */
+}
+
+.grid-container a {
+    width: 100%; /* 各ボタンを均等に広げる */
+    display: block; /* ブロック要素として扱う */
+    margin: 0; /* 余白を削除 */
+}
+
+.grid-container a img {
+    width: 100%; /* 親要素に対してピッタリ */
+    height: auto; /* 縦横比を維持 */
+    display: block; /* 画像の余白を削除 */
+    margin: 0; /* 余白を削除 */
+}
+
 .vertical-list {
     list-style: none; /* リストのマーカーを非表示 */
     padding: 0;
-    margin: 0;
+    margin: 0; /* リスト全体の余白を削除 */
 }
 
 .vertical-list li {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* 各リスト項目の余白を削除 */
+    padding: 0; /* 各リスト項目のパディングを削除 */
 }
 
 .vertical-list li a img {
     display: block; /* 画像の下に隙間ができないようにする */
     width: 100%; /* 画像の幅を調整（不要なら削除） */
     height: auto;
+    margin: 0; /* 余白を削除 */
 }
