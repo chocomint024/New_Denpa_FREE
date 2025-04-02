@@ -4,6 +4,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    margin: 0;
+    padding: 0;
 }
 
 .header-image {
@@ -13,9 +15,8 @@ body {
     margin: 0 auto;
 }
 
-/* ヘッダーとイベント部分の隙間をなくす */
 .container {
-    width: 80%;
+    width: 60%;
     margin: auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -23,7 +24,7 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 0; /* 隙間を完全になくす */
+    gap: 0;
 }
 
 h1 {
@@ -53,9 +54,13 @@ nav ul li {
     font-weight: bold;
     text-decoration: none;
     color: white;
+    transition: transform 0.2s ease-in-out;
 }
 
-/* ヘッダーとイベント部分の隙間をなくす */
+.btn:hover {
+    transform: scale(1.05);
+}
+
 .header {
     margin: 0;
     padding: 0;
@@ -93,7 +98,7 @@ nav ul li {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0; /* 隙間をなくす */
+    gap: 10px;
     text-align: center;
     margin-top: 20px;
 }
@@ -104,7 +109,7 @@ nav ul li {
 
 .buttons, .download-buttons {
     display: flex;
-    gap: 0; /* 隙間を完全になくす */
+    gap: 10px;
 }
 
 .follow-button {
@@ -114,6 +119,11 @@ nav ul li {
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.follow-button:hover {
+    background-color: #333;
 }
 
 .download-buttons img {
@@ -121,12 +131,10 @@ nav ul li {
     width: auto;
 }
 
-/* スマホ対応 */
 @media (max-width: 600px) {
     .footer-container {
         flex-direction: column;
     }
-
     .buttons, .download-buttons {
         flex-direction: column;
     }
@@ -158,12 +166,11 @@ nav ul li {
     text-decoration: underline;
 }
 
-/* 画像同士の横の隙間を削除 */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0; /* 隙間を完全になくす */
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+    width: 90%;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -172,6 +179,11 @@ nav ul li {
     width: 100%;
     display: block;
     margin: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.grid-container a:hover {
+    transform: scale(1.05);
 }
 
 .grid-container a img {
@@ -181,7 +193,6 @@ nav ul li {
     margin: 0;
 }
 
-/* 縦リストの画像の隙間を削除 */
 .vertical-list {
     list-style: none;
     padding: 0;
@@ -189,8 +200,13 @@ nav ul li {
 }
 
 .vertical-list li {
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.vertical-list li:hover {
+    transform: scale(1.05);
 }
 
 .vertical-list li a img {
@@ -200,7 +216,6 @@ nav ul li {
     margin: 0;
 }
 
-/* 画面サイズが大きい場合は画像も大きくする */
 @media (min-width: 1024px) {
     .grid-container {
         max-width: 1200px;
