@@ -3,25 +3,25 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
-}
-
-
-.header-image {
-    max-width: 100%;  /* 親要素の幅を超えないようにする */
-    height: auto;     /* 縦横比を維持 */
-    display: block;   /* 余計な隙間をなくす */
-    margin: 0 auto;   /* 中央揃え */
+    background-attachment: fixed; /* スクロール時に背景が動かないようにする */
 }
 
 .container {
-    width: 80%;
-    margin: 0; /* 上下のマージンを削除 */
+    width: 100%; /* 幅を100%に変更 */
+    margin: auto; /* 自動マージンで中央揃え */
     padding: 0; /* パディングを削除 */
     background-color: transparent; /* 背景を透明に */
     color: black;
     border-radius: 0; /* 角を丸めない */
 }
+
+.header-image {
+    max-width: 100%; /* 親要素の幅を超えないようにする */
+    height: auto; /* 縦横比を維持 */
+    display: block; /* 余計な隙間をなくす */
+    margin: 0 auto; /* 中央揃え */
+}
+
 
 h1 {
     font-size: 24px;
