@@ -3,17 +3,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* スクロール時に背景が動かないようにする */
+    background-attachment: scroll;
 }
 
-.container {
-    width: 70%; /* 横幅を少し減らす（80%から70%に変更） */
-    margin: auto; /* 自動マージンで中央揃え */
-    padding: 20px; /* パディングを再度設定 */
-    background-color: rgba(255, 255, 255, 0.9); /* 半透明の白背景で可読性を向上 */
-    color: black;
-    border-radius: 10px; /* 角を丸める */
-}
 
 .header-image {
     max-width: 100%;  /* 親要素の幅を超えないようにする */
@@ -23,6 +15,14 @@ body {
 }
 
 
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明の白背景で可読性を向上 */
+    color: black;
+    border-radius: 10px;
+}
 
 h1 {
     font-size: 24px;
