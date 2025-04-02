@@ -53,21 +53,6 @@ nav ul li {
     color: white;
 }
 
-.discord {
-    background-image: url('images/discord.png'); /* Discordボタンの画像 */
-}
-
-.qr {
-    background-image: url('images/qr.png'); /* QRコード生成ボタンの画像 */
-}
-
-.physique {
-    background-image: url('images/physique.png'); /* 体格表ボタンの画像 */
-}
-
-.battle {
-    background-image: url('images/battle.png'); /* バトルタワー攻略ボタンの画像 */
-}
 
 .twitter-account {
     text-align: right; /* 右寄せ */
@@ -161,4 +146,28 @@ nav ul li {
 #event-image {
     max-width: 100%; /* 画像の幅を自動調整 */
     height: auto;
+}
+
+
+
+nav ul {
+    list-style-type: none; /* リストの点を消す */
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    flex-wrap: wrap; /* スマホ対応 */
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li img {
+    width: 150px; /* 画像サイズを適宜調整 */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+nav ul li img:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
 }
