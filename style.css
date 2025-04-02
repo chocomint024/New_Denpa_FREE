@@ -183,7 +183,7 @@ transition: transform 0.2s ease-in-out;
 }
 
 .vertical-list li a img {
-    width: 160px; /* 画像サイズ統一 */
+    width: 100px; /* 画像サイズ統一 */
     height: auto;
     transition: transform 0.2s ease-in-out; /* スムーズな拡大アニメーション */
 }
