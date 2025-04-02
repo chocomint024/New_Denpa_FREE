@@ -177,19 +177,19 @@ nav ul li {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2列レイアウト */
-    gap: 10px; /* 画像の間隔 */
-    justify-items: center; /* 画像を中央揃え */
-    margin: 20px auto;
-    max-width: 600px; /* 最大幅を調整 */
+    gap: 0; /* 隙間を完全になくす */
+    width: 100%; /* 幅いっぱいに広げる */
+    max-width: 600px; /* 最大幅を適切に設定 */
+    margin: 0 auto; /* 中央配置 */
+}
+
+.grid-container a {
+    width: 100%; /* 各ボタンを均等に広げる */
 }
 
 .grid-container a img {
-    width: 100%; /* 幅を調整 */
-    max-width: 280px; /* 画像サイズを適宜変更 */
-    height: auto;
-    transition: transform 0.2s ease-in-out;
+    width: 100%; /* 親要素に対してピッタリ */
+    height: auto; /* 縦横比を維持 */
+    display: block; /* 画像の余白を削除 */
 }
 
-.grid-container a img:hover {
-    transform: scale(1.1); /* ホバー時に拡大 */
-}
