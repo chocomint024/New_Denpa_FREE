@@ -14,14 +14,13 @@ body {
     margin: 0 auto;   /* 中央揃え */
 }
 
-
 .container {
     width: 80%;
-    margin: auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* 半透明の白背景で可読性を向上 */
+    margin: 0; /* 上下のマージンを削除 */
+    padding: 0; /* パディングを削除 */
+    background-color: transparent; /* 背景を透明に */
     color: black;
-    border-radius: 10px;
+    border-radius: 0; /* 角を丸めない */
 }
 
 h1 {
