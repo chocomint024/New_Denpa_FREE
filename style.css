@@ -156,7 +156,7 @@ nav ul li {
     display: flex;
     flex-direction: column; /* 縦並びにする */
     align-items: center; /* 中央揃え */
-    gap: 10px; /* 各要素の間隔 */
+    gap: 0; /* 隙間を完全になくす */
 }
 
 .vertical-list li {
