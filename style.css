@@ -199,6 +199,9 @@ nav ul li {
     }
 }
 
+.grid-container a img:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
+}
 
 .grid-container {
     display: grid;
