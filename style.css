@@ -135,3 +135,20 @@ nav ul li {
     height: auto; /* 必要に応じて調整 */
     padding: 20px 0;
 }
+
+.free-site-link {
+    text-align: center; /* 中央揃え */
+    font-size: 18px; /* 文字サイズを調整 */
+    font-weight: bold; /* 太字 */
+    margin-top: 20px; /* 余白を追加 */
+}
+
+.free-site-link a {
+    color: #007bff; /* リンクを青色に */
+    text-decoration: none; /* 下線を消す */
+    font-weight: bold;
+}
+
+.free-site-link a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
