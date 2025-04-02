@@ -10,40 +10,38 @@
 </head>
 <body>
     <div class="container">
-        <img src="IMG_0041.png" alt="サイトのヘッダー画像" class="header-image">
+        <img src="home.png" alt="サイトのヘッダー画像" class="header-image">
 
-    <div id="daily-event"></div>
+    <div id="daily-event">
+    <img id="event-image" src="" alt="本日のイベント">
+</div>
+
 
 <script>
     function updateEvent() {
-        // 曜日ごとのイベントリスト
-        const events = {
-            0: "経験値ゲット, バトルタワー", // 日曜日
-            1: "ブーストゲット", // 月曜日
-            2: "ごちそうゲット, バトルタワー", // 火曜日
-            3: "経験値ゲット", // 水曜日
-            4: "コインゲット, バトルタワー", // 木曜日
-            5: "レッツフィッシング！", // 金曜日
-            6: "ゴールドゲット, バトルタワー" // 土曜日
+        // イベントごとの画像ファイル（画像は "images" フォルダ内に配置）
+        const eventImages = {
+            0: "images/event7.png",    // 日曜日
+            1: "images/event1.png",    // 月曜日
+            2: "images/event2.png",   // 火曜日
+            3: "images/event3.png", // 水曜日
+            4: "images/event4.png",  // 木曜日
+            5: "images/event5.png",    // 金曜日
+            6: "images/event6.png"   // 土曜日
         };
 
         // 現在の日時を取得
         const now = new Date();
         let day = now.getDay(); // 今日の曜日を取得
         let hours = now.getHours(); // 現在の時間を取得
-        let currentDate = now.getDate(); // 日付を取得
 
         // 15時（午後3時）より前なら、前日の日付のイベントを表示
         if (hours < 15) {
             day = (day - 1 + 7) % 7; // 前日に変更（日曜日なら土曜日に戻す）
-            currentDate -= 1; // 日付も前日に
         }
 
-        // 1日おきに「ランダムボスチャレンジ」を追加
-        let extraEvent = (currentDate % 2 === 0) ? ", ランダムボスチャレンジ" : "";
-
-        // イベントを表示
-        document.getElementById("daily-event").innerText = `今日のイベント: ${events[day]}${extraEvent}`;
+        // 画像を変更
+        document.getElementById("event-image").src = eventImages[day];
     }
 
     // 初回実行
