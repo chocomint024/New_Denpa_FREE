@@ -166,13 +166,12 @@ nav ul li {
 .vertical-list li a img {
     width: 160px; /* 画像サイズ統一 */
     height: auto;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out; /* スムーズな拡大アニメーション */
 }
 
 .vertical-list li a img:hover {
     transform: scale(1.1); /* ホバー時に拡大 */
 }
-
 
 .grid-container {
     display: grid;
@@ -191,6 +190,11 @@ nav ul li {
     width: 100%; /* 親要素に対してピッタリ */
     height: auto; /* 縦横比を維持 */
     display: block; /* 画像の余白を削除 */
+    transition: transform 0.2s ease-in-out; /* スムーズな拡大アニメーション */
+}
+
+.grid-container a img:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
 }
 
 /* 画面サイズが大きい場合は画像も大きくする */
@@ -198,10 +202,6 @@ nav ul li {
     .grid-container {
         max-width: 1200px; /* デスクトップで大きく表示 */
     }
-}
-
-.grid-container a img:hover {
-    transform: scale(1.1); /* ホバー時に拡大 */
 }
 
 .grid-container {
