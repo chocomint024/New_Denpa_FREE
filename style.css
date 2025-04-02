@@ -173,11 +173,11 @@ transition: transform 0.2s ease-in-out;
 }
 
 .vertical-list li {
-    display: block; /* 縦並びを強制 */
-    width: 100%; /* 画像の幅を調整（不要なら削除） */
+    display: block;
+    width: auto; /* 画像のサイズに合わせる */
     height: auto;
-    margin: 0; /* 余白を削除 */
-    padding: 0; /* 各リスト項目のパディングを削除 */
+    margin: 0;
+    padding: 0;
 }
 
 }
